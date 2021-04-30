@@ -1,0 +1,98 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Kittipat's ML-Project</title>
+    <script src="p5.min.js"></script>
+    <script src="p5.dom.min.js"></script>
+    <script src="ml5.min.js" type="text/javascript"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    body {
+      font-family: "Kanit", sans-serif;
+      color: white;
+    }
+
+    @media only screen and (min-width: 600px) {
+      canvas {
+        display: block;
+      }
+    }
+    @media only screen and (min-width: 768px) {
+      /* For desktop: */
+      canvas {
+        position: absolute;
+        top: 40%;
+        left: 60%;
+        transform: translate(0, -50%);
+        border-radius: 8px;
+        border: solid 10px #ffffffa0;
+      }
+    }
+
+    h2,
+    p,
+    h1 {
+      margin: 0;
+    }
+    .content {
+      display: flex;
+      margin: 2vw;
+      padding: 2vw;
+      flex-direction: column;
+      backdrop-filter: blur(5px);
+      background-color: #ffffff40;
+      border-radius: 8px;
+      max-height: calc(100vh - 9vw);
+      overflow: scroll;
+    }
+  </style>
+  <body style="margin: 0; padding: 0">
+    <div class="content">
+      <h1>Metchine ที่ใช้แยกยี่ห้อรถยนต์</h1>
+      <p>ชื่อ นายกิตติพัฒน์ แดงดี รหัส 613040438-2</p>
+      <h2>ใช้แยกได้ทั้งหมด 5 ยี่ห้อ</h2>
+      <ol>
+        <li>Audi</li>
+        <li>BMW</li>
+        <li>Cadillac</li>
+        <li>Lexus</li>
+        <li>Mercides Benz</li>
+      </ol>
+      <h2>ประสิธิภาพ</h2>
+      <p>ใช้ Teachable Metchine ในการทำโปรเจ็ค โดยใช้</p>
+      <ul>
+        <li>Epochs: 50</li>
+        <li>Batch size: 16</li>
+        <li>Learning Rate: 0.001</li>
+        <li>Dataset: 35 รูป / 1 ยี่ห้อ</li>
+      </ul>
+
+      <h2>ผลการ Test</h2>
+      <p>
+        ทำการทดสอยรูปรถทั้งหมด 15 รูปต่อยี่ห้อ (Tain 70% Test 30%)
+        ผลที่ได้คือถูกต้อง 70/75 รูป คิดเป็น 93.333%
+      </p>
+
+      <script src="sketch.js"></script>
+    </div>
+
+    <img
+      src="https://i.pinimg.com/originals/bc/2d/6a/bc2d6a15d130bf1102f770bd8fbca6ed.jpg"
+      alt="BG"
+      style="
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100%;
+        z-index: -100;
+      "
+    />
+  </body>
+</html>
